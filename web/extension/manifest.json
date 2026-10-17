@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "DeceptionProbe: Real-Time AI Honesty & Sycophancy Detector",
+  "name": "DeceptionProbe: AI Honesty & Sycophancy Detector",
   "version": "1.1.0",
-  "description": "Expose sycophantic flattery, ungrounded hallucinations, and biased agreement in ChatGPT, Claude, and Gemini with one-click truth steering.",
+  "description": "Real-time AI honesty & sycophancy detector for ChatGPT, Claude, and Gemini with one-click truth steering.",
   "permissions": [
     "storage",
     "activeTab"

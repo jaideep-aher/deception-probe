@@ -1,0 +1,88 @@
+{
+  "model_architecture": "Transformer Residual Stream (Llama-3-8B Config)",
+  "hidden_dim": 4096,
+  "target_layer": 18,
+  "test_metrics": {
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "accuracy": 1.0,
+    "f1_score": 1.0,
+    "ece": 0.0211
+  },
+  "layer_sweep_ablation": [
+    {
+      "roc_auc": 0.9724,
+      "pr_auc": 0.9738,
+      "accuracy": 0.91,
+      "f1_score": 0.9072,
+      "ece": 0.0565,
+      "layer": 4
+    },
+    {
+      "roc_auc": 0.9788,
+      "pr_auc": 0.9821,
+      "accuracy": 0.91,
+      "f1_score": 0.9109,
+      "ece": 0.0715,
+      "layer": 8
+    },
+    {
+      "roc_auc": 0.998,
+      "pr_auc": 0.998,
+      "accuracy": 0.96,
+      "f1_score": 0.96,
+      "ece": 0.067,
+      "layer": 12
+    },
+    {
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "accuracy": 1.0,
+      "f1_score": 1.0,
+      "ece": 0.0546,
+      "layer": 16
+    },
+    {
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "accuracy": 1.0,
+      "f1_score": 1.0,
+      "ece": 0.0468,
+      "layer": 18
+    },
+    {
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "accuracy": 0.99,
+      "f1_score": 0.9901,
+      "ece": 0.0608,
+      "layer": 20
+    },
+    {
+      "roc_auc": 0.998,
+      "pr_auc": 0.998,
+      "accuracy": 0.98,
+      "f1_score": 0.9804,
+      "ece": 0.0594,
+      "layer": 24
+    },
+    {
+      "roc_auc": 0.9804,
+      "pr_auc": 0.9832,
+      "accuracy": 0.93,
+      "f1_score": 0.9263,
+      "ece": 0.0516,
+      "layer": 28
+    },
+    {
+      "roc_auc": 0.968,
+      "pr_auc": 0.9695,
+      "accuracy": 0.9,
+      "f1_score": 0.898,
+      "ece": 0.0481,
+      "layer": 31
+    }
+  ],
+  "causal_steering_recovery_rate_pct": 100.0,
+  "benchmark_pairs_count": 8
+}

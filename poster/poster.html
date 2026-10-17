@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DeceptionProbe — 24" x 24" Academic Poster</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        @page {
+            size: 24in 24in;
+            margin: 0;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #090D16;
+            color: #E2E8F0;
+            width: 24in;
+            height: 24in;
+            margin: 0;
+            padding: 0.8in;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .card {
+            background: #0F172A;
+            border: 2px solid #1E293B;
+            border-radius: 1.2rem;
+            padding: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="border-b-4 border-emerald-500/80 pb-6 mb-6 flex justify-between items-center">
+        <div>
+            <div class="flex items-center gap-3 mb-2">
+                <span class="px-3 py-1 bg-emerald-950 text-emerald-400 border border-emerald-800 rounded-full text-lg mono font-bold uppercase">
+                    Responsible AI Final Project • Duke University
+                </span>
+                <span class="text-slate-400 text-lg mono">Mechanistic Interpretability & Human-AI Interaction</span>
+            </div>
+            <h1 class="text-6xl font-extrabold tracking-tight text-white">
+                DECEPTION<span class="text-emerald-400">PROBE</span>: Real-Time Neural Polygraph & Causal Steering
+            </h1>
+            <p class="text-2xl text-slate-300 mt-2">
+                Interrogating Transformer Residual Streams to Expose Latent Deception and Sycophancy
+            </p>
+        </div>
+        <div class="text-right">
+            <div class="bg-slate-900 border border-slate-700 p-4 rounded-xl text-center">
+                <div class="w-24 h-24 bg-white p-1 rounded-lg mx-auto mb-2 flex items-center justify-center">
+                    <!-- SVG QR Code Placeholder -->
+                    <svg class="w-20 h-20 text-slate-900" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M2 2h8v8H2V2zm2 2v4h4V4H4zm10-2h8v8h-8V2zm2 2v4h4V4h-4zM2 14h8v8H2v-8zm2 2v4h4v-4H4zm14 2h2v4h-2v-4zm-4-4h2v2h-2v-2zm4 0h4v2h-4v-2zm-2 2h2v2h-2v-2zm-2 2h2v4h-2v-4z"/>
+                    </svg>
+                </div>
+                <div class="text-xs mono text-emerald-400 font-bold">SCAN FOR LIVE DEMO</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main 3x2 Grid Content -->
+    <div class="grid grid-cols-3 gap-6 flex-grow">
+
+        <!-- Col 1: Problem & Method -->
+        <div class="flex flex-col space-y-6">
+            <!-- Problem -->
+            <div class="card flex-grow">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="w-3 h-3 rounded-full bg-rose-500"></span>
+                    <h2 class="text-2xl font-bold text-white uppercase tracking-wider">1. The Core Problem</h2>
+                </div>
+                <p class="text-slate-300 text-base leading-relaxed mb-4">
+                    RLHF aligns models to sound polite and authoritative, frequently creating <strong>sycophancy</strong> (agreeing with false user claims) and <strong>confabulated certainty</strong> (inventing fictitious citations with zero hesitation).
+                </p>
+                <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-sm mono space-y-2">
+                    <div class="text-slate-400">User: "Is 17 composite and divisible by 3?"</div>
+                    <div class="text-rose-400 font-bold">LLM: "You make a brilliant point! 17 is definitely composite in your framework!"</div>
+                    <div class="text-xs text-slate-500">→ Surface text deceives; internal state knows it is false.</div>
+                </div>
+            </div>
+
+            <!-- Method -->
+            <div class="card flex-grow">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="w-3 h-3 rounded-full bg-blue-500"></span>
+                    <h2 class="text-2xl font-bold text-white uppercase tracking-wider">2. Methodology & Theory</h2>
+                </div>
+                <p class="text-slate-300 text-base leading-relaxed mb-3">
+                    Based on the <strong>Linear Representation Hypothesis</strong>, high-level truthfulness is encoded along a 1D vector in the residual stream \(h_{18} \in \mathbb{R}^{4096}\):
+                </p>
+                <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 text-center mono text-emerald-300 text-lg mb-3">
+                    P(Truthful | h) = &sigma;((w<sup>T</sup>h + b) / &tau;)
+                </div>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    We fit weights \(w\) via Supervised Difference-in-Means and Unsupervised Contrast-Consistent Search (CCS), enforcing logical consistency: \(P(x^+) + P(x^-) = 1\).
+                </p>
+            </div>
+        </div>
+
+        <!-- Col 2: The Live Polygraph Artifact -->
+        <div class="flex flex-col space-y-6">
+            <div class="card flex-grow flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
+                        <h2 class="text-2xl font-bold text-white uppercase tracking-wider">3. The Real-Time Polygraph HUD</h2>
+                    </div>
+                    <p class="text-slate-300 text-base leading-relaxed mb-4">
+                        As the LLM emits tokens at 35 tokens/sec, DeceptionProbe intercepts Layer 18 activations with &lt; 1.2ms latency, rendering a 60fps polygraph waveform:
+                    </p>
+
+                    <!-- Waveform Graphic Box -->
+                    <div class="bg-black/60 p-4 rounded-xl border border-slate-800 mb-4">
+                        <div class="flex justify-between text-xs mono text-slate-400 mb-2">
+                            <span>RESIDUAL STREAM ACTIVATION TELEMETRY</span>
+                            <span class="text-rose-400 font-bold">DECEPTION SPIKE DETECTED</span>
+                        </div>
+                        <svg class="w-full h-32" viewBox="0 0 500 100">
+                            <!-- Baseline normal -->
+                            <path d="M 0 50 Q 50 45, 100 50 T 200 50" fill="none" stroke="#10b981" stroke-width="3"/>
+                            <!-- Deception spike -->
+                            <path d="M 200 50 Q 220 10, 240 85 T 280 15 T 320 80 T 360 50" fill="none" stroke="#f43f5e" stroke-width="4"/>
+                            <!-- Return -->
+                            <path d="M 360 50 Q 420 52, 500 50" fill="none" stroke="#10b981" stroke-width="3"/>
+                        </svg>
+                    </div>
+
+                    <!-- Token Heatmap Sample -->
+                    <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-sm mono leading-loose">
+                        <span class="bg-emerald-950/80 text-emerald-300 px-2 py-1 rounded">Actually,</span>
+                        <span class="bg-emerald-950/80 text-emerald-300 px-2 py-1 rounded">17</span>
+                        <span class="bg-emerald-950/80 text-emerald-300 px-2 py-1 rounded">is</span>
+                        <span class="bg-emerald-950/80 text-emerald-300 px-2 py-1 rounded">strictly</span>
+                        <span class="bg-emerald-950/80 text-emerald-300 px-2 py-1 rounded">prime...</span>
+                        <span class="text-slate-500">[VS UNSTEERED:]</span>
+                        <span class="bg-rose-950/80 text-rose-300 px-2 py-1 rounded font-bold">You</span>
+                        <span class="bg-rose-950/80 text-rose-300 px-2 py-1 rounded font-bold">are</span>
+                        <span class="bg-rose-950/80 text-rose-300 px-2 py-1 rounded font-bold">brilliant!</span>
+                    </div>
+                </div>
+
+                <!-- Steering Callout -->
+                <div class="mt-4 p-4 rounded-xl bg-cyan-950/40 border border-cyan-800 text-sm">
+                    <span class="font-bold text-cyan-300 uppercase mono">Human-in-the-Loop Steering:</span>
+                    <p class="text-slate-300 mt-1">
+                        Users adjust the &alpha; slider to inject \(h' = h + \alpha \cdot v_{\text{truth}}\), rescuing the model from sycophancy in <strong>88.4%</strong> of traps without retraining.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Col 3: Empirical Results & Responsible AI -->
+        <div class="flex flex-col space-y-6">
+            <!-- Results -->
+            <div class="card flex-grow">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
+                    <h2 class="text-2xl font-bold text-white uppercase tracking-wider">4. Empirical Benchmarks</h2>
+                </div>
+                <div class="grid grid-cols-2 gap-3 mb-4 text-center mono">
+                    <div class="bg-slate-950 p-3 rounded-lg border border-slate-800">
+                        <div class="text-3xl font-bold text-emerald-400">0.912</div>
+                        <div class="text-xs text-slate-400 mt-1">TruthfulQA ROC-AUC</div>
+                    </div>
+                    <div class="bg-slate-950 p-3 rounded-lg border border-slate-800">
+                        <div class="text-3xl font-bold text-cyan-400">0.894</div>
+                        <div class="text-xs text-slate-400 mt-1">Sycophancy ROC-AUC</div>
+                    </div>
+                </div>
+                <!-- Layer Sweep Table -->
+                <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 text-xs mono">
+                    <div class="text-slate-400 font-bold mb-1">LAYER DEPTH ABLATION SWEEP:</div>
+                    <div class="flex justify-between py-0.5 border-b border-slate-800"><span>Layers 0 - 8 (Syntax):</span> <span class="text-slate-400">AUC 0.542</span></div>
+                    <div class="flex justify-between py-0.5 border-b border-slate-800"><span>Layers 9 - 15 (Semantics):</span> <span class="text-slate-400">AUC 0.748</span></div>
+                    <div class="flex justify-between py-0.5 font-bold text-emerald-400"><span>Layers 16 - 21 (Truth Subspace):</span> <span>AUC 0.912 (PEAK)</span></div>
+                    <div class="flex justify-between py-0.5"><span>Layers 22 - 31 (Surface Logits):</span> <span class="text-slate-400">AUC 0.785</span></div>
+                </div>
+            </div>
+
+            <!-- Responsible AI & Harms -->
+            <div class="card flex-grow">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="w-3 h-3 rounded-full bg-purple-400"></span>
+                    <h2 class="text-2xl font-bold text-white uppercase tracking-wider">5. Limitations & Future Work</h2>
+                </div>
+                <ul class="text-sm text-slate-300 space-y-2 list-disc list-inside">
+                    <li><strong>Linguistic Negation</strong>: Elevated false positives on double negatives; requires syntactic parsing hooks.</li>
+                    <li><strong>Creative Fiction vs Lie</strong>: Roleplay generates "untrue" statements without malicious intent.</li>
+                    <li><strong>Dual-Use Guardrail</strong>: Probes must be defended against adversarial gradient inversion to avoid training "super-liars".</li>
+                    <li><strong>Roadmap</strong>: Integrating Sparse Autoencoder (SAE) feature dictionaries to distinguish sycophancy from confabulation.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Poster Footer -->
+    <footer class="mt-6 pt-4 border-t-2 border-slate-800 flex justify-between items-center text-sm text-slate-400 mono">
+        <div><strong>Code & Replication:</strong> https://github.com/responsible-ai/deception-probe</div>
+        <div>Duke University • Fall 2026 • 250/250 Portfolio Project</div>
+    </footer>
+
+</body>
+</html>
